@@ -1,14 +1,27 @@
 {
+  "name": "pj3-miaudota-backend",
+  "version": "0.1.0",
+  "description": "Backend do projeto 3 modulo.",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server",
+    "dev": "nodemon src/server"
+  },
+  "keywords": [
+    "api",
+    "node",
+    "express"
+  ],
+  "author": "Maria Fabris",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.21"
+  },
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.18.2",
-    "install": "^0.13.0",
     "mysql": "^2.18.1",
-    "node": "^20.1.0",
-    "npm": "^9.6.6",
     "zod": "^3.21.4"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.22"
   }
 }
