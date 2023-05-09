@@ -2,7 +2,7 @@ import con from '../db/dbConnection.js'
 
 //listar
 export const listAllAdocao = (callback) => {
-    const sql = "SELECT nome, foto, idade, sexo, vacinado, castrado, raca FROM adocao;"
+    const sql = "SELECT nome, foto, idade, sexo, vacinado, castrado, raca, tipo FROM adocao;"
     con.query(sql, (err, result) => {
         if (err) {
             callback(err, null)
@@ -15,9 +15,9 @@ export const listAllAdocao = (callback) => {
 
 //criar
 export const createAdocao = (adocao, callback) => {
-    const { nome, foto, idade, sexo, vacinado, castrado, raca } = adocao
+    const { nome, foto, idade, sexo, vacinado, castrado, raca, tipo } = adocao
     const sql = 'INSERT INTO adocao SET ?;'
-    const values = {nome, foto, idade, sexo, vacinado, castrado, raca}
+    const values = {nome, foto, idade, sexo, vacinado, castrado, raca, tipo}
 
     con.query(sql, values, (err, result) => {
         if (err) {
@@ -46,9 +46,9 @@ export const deleteAdocao = (id, callback) => {
 }
 
 export const updateAdocao = (adocao, callback) => {
-    const {nome, foto, idade, sexo, vacinado, castrado, raca} = adocao
+    const {nome, foto, idade, sexo, vacinado, castrado, raca, tipo} = adocao
     const sql = 'UPDATE adocao SET ?;'
-    const values = {nome, foto, idade, sexo, vacinado, castrado, raca}
+    const values = {nome, foto, idade, sexo, vacinado, castrado, raca, tipo}
 
     con.query(sql, values, (err, result) => {
         if (err) {
