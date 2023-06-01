@@ -17,7 +17,7 @@ export const checkSession = (token, callback) => {
     const sql = `
     SELECT s.id_usuario, u.roles
     FROM sessoes as s
-    INNER JOIN usuarios as u
+    INNER JOIN usuario as u
     ON s.id_usuario = u.id
     WHERE s.sessao = ?;
     `

@@ -35,9 +35,8 @@ const userSchema = z.object({
         z.string({
             invalid_type_error: "Foto de perfil deve ser uma string.",
         })
-            .url({ message: "Foto de perfil deve ser uma URL válida." })
             .optional(),
-
+    
 
     usuario:
         z.string({
@@ -51,8 +50,7 @@ const userSchema = z.object({
             required_error: "idade é obrigatória.",
             invalid_type_error: "idade deve ser um número.",
         })
-            .min(2, { message: "O Usuário deve ter ao menos 12 anos." })
-            .max(3, { message: "Usuário deve ter no máximo 200 anos." }),
+            .optional(),
             
     qtdanimais:
         z.string({
@@ -118,9 +116,9 @@ export const deleteUser = (id, callback) => {
 }
 
 export const updateUser = (user, callback) => {
-    const { fotoperfil, fotocapa, nome, usuario, email, senha, idade, qtdanimais } = user
-    const sql = 'UPDATE usuario SET ?;'
-    const values = { fotoperfil, fotocapa, nome, usuario,  email, senha, idade,  qtdanimais }
+    const { id, fotoperfil, fotocapa, nome, usuario, email, senha, idade, qtdanimais } = user
+    const sql = 'UPDATE usuario SET fotoperfil = ?, fotocapa = ?, nome = ?, usuario = ?, email = ?, senha = ?, idade = ?, qtdanimais = ?  WHERE id = ?;'
+    const values = [fotoperfil, fotocapa, nome, usuario,  email, senha, idade,  qtdanimais, id ]  
 
     con.query(sql, values, (err, result) => {
         if (err) {
