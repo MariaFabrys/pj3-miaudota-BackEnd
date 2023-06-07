@@ -7,9 +7,9 @@ import {createPerdido, listAllPerdido, deletePerdido, updatePerdido}
  const router = express.Router();
 
  
-router.get('/', listAllPerdido);
+router.get('/perdido', listAllPerdido);
 router.post('/', createPerdido); 
-router.delete('/', deletePerdido); 
+router.delete('/perdido', deletePerdido); 
 router.put('/', updatePerdido); 
 
 

@@ -2,7 +2,7 @@ import con from '../db/dbConnection.js'
 
 //listar
 export const listAllPerdido = (callback) => {
-    const sql = "SELECT tipo, nome, idade, raca, sexo, porte, foto, bairro  FROM perdido;"
+    const sql = "SELECT tipo, nome, idade, raca, sexo, porte, foto, bairro, descricao  FROM perdido;"
     con.query(sql, (err, result) => {
         if (err) {
             callback(err, null)
@@ -15,9 +15,9 @@ export const listAllPerdido = (callback) => {
 
 //criar
 export const createPerdido = (perdido, callback) => {
-    const {  tipo, nome, idade, raca, sexo, porte, foto, bairro} = perdido
+    const {  tipo, nome, idade, raca, sexo, porte, foto, bairro, descricao} = perdido
     const sql = 'INSERT INTO perdido SET ?;'
-    const values = { tipo, nome, idade, raca, sexo, porte, foto, bairro}
+    const values = { tipo, nome, idade, raca, sexo, porte, foto, bairro, descricao}
 
     con.query(sql, values, (err, result) => {
         if (err) {
@@ -46,9 +46,9 @@ export const deletePerdido = (id, callback) => {
 }
 
 export const updatePerdido = (perdido, callback) => {
-    const { tipo, nome, idade, raca, sexo, porte, foto, bairro} = perdido
+    const { tipo, nome, idade, raca, sexo, porte, foto, bairro, descricao} = perdido
     const sql = 'UPDATE perdido SET ?;'
-    const values = { tipo, nome, idade, raca, sexo, porte, foto, bairro}
+    const values = { tipo, nome, idade, raca, sexo, porte, foto, bairro, descricao}
 
     con.query(sql, values, (err, result) => {
         if (err) {
