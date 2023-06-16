@@ -116,9 +116,9 @@ export const deleteUser = (id, callback) => {
 }
 
 export const updateUser = (user, callback) => {
-    const { id, fotoperfil, fotocapa, nome, usuario, email, senha, idade, qtdanimais } = user
-    const sql = 'UPDATE usuario SET fotoperfil = ?, fotocapa = ?, nome = ?, usuario = ?, email = ?, senha = ?, idade = ?, qtdanimais = ?  WHERE id = ?;'
-    const values = [fotoperfil, fotocapa, nome, usuario,  email, senha, idade,  qtdanimais, id ]  
+    const { id, fotoperfil, fotocapa, nome, usuario, email, idade, qtdanimais } = user
+    const sql = 'UPDATE usuario SET fotoperfil = ?, fotocapa = ?, nome = ?, usuario = ?, email = ?, idade = ?, qtdanimais = ?  WHERE id = ?;'
+    const values = [fotoperfil, fotocapa, nome, usuario,  email, idade,  qtdanimais, id ]  
 
     con.query(sql, values, (err, result) => {
         if (err) {

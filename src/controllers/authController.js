@@ -27,6 +27,8 @@ export const login = (req, res) => {
                                 fotocapa: resultUser[0].fotocapa,
                                 usuario: resultUser[0].usuario,
                                 qtdanimais: resultUser[0].qtdanimais,
+                                idade: resultUser[0].idade,
+                                email: resultUser[0].email,
                                 roles: resultUser[0].roles
                             }
                         })

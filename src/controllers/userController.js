@@ -84,9 +84,12 @@ export const deleteUser = (req, res) => {
 
 export const updateUser = (req, res) => {
     const user = req.body
+    const idUserLogged = req.idUserLogged
+    user.id = idUserLogged
+
     const validUser = userModel.validateUserToUpdate(user)
 
-    const idUserLogged = req.idUserLogged
+
     const rolesUserLogged = req.rolesUserLogged
 
     if (validUser?.error) {
