@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 26-Jun-2023 às 21:55
+-- Tempo de geração: 28-Jun-2023 às 19:26
 -- Versão do servidor: 10.4.22-MariaDB
 -- versão do PHP: 8.0.13
 
@@ -44,17 +44,7 @@ CREATE TABLE `adocao` (
 --
 
 INSERT INTO `adocao` (`id`, `nome`, `foto`, `idade`, `sexo`, `castrado`, `raca`, `descricao`, `tipo`) VALUES
-(2, 'Fernanda', 'https://www.florence.edu.br/wp-content/uploads/2022/08/Imagem-Materia_Dia-do-Cachorro.png', '2', 'femea', '', 's', '', 'cachorro'),
-(3, 'Fernanda', 'https://www.florence.edu.br/wp-content/uploads/2022/08/Imagem-Materia_Dia-do-Cachorro.png', '23', 'femea', 'nao', 'cão', '', 'cachorro'),
-(4, 'wwaeawe', 'https://www.florence.edu.br/wp-content/uploads/2022/08/Imagem-Materia_Dia-do-Cachorro.png', '23', 'femea', 'sim', '2222', '', 'cachorro'),
-(5, 'Maria', 'https://www.florence.edu.br/wp-content/uploads/2022/08/Imagem-Materia_Dia-do-Cachorro.png', '1', 'macho', 'nao', 's', '', 'cachorro'),
-(6, 'Renan', 'https://www.florence.edu.br/wp-content/uploads/2022/08/Imagem-Materia_Dia-do-Cachorro.png', '40', 'macho', 'sim', 'gggg', '', 'cachorro'),
-(7, 'Fernanda', 'https://www.florence.edu.br/wp-content/uploads/2022/08/Imagem-Materia_Dia-do-Cachorro.png', '2', 'femea', 'sim', 'gggg', '', 'gato'),
-(8, 'Maria', 'https://www.florence.edu.br/wp-content/uploads/2022/08/Imagem-Materia_Dia-do-Cachorro.png', '4', 'femea', 'sim', 'gggg', '', 'cachorro'),
-(9, 'Fernanda', 'https://www.florence.edu.br/wp-content/uploads/2022/08/Imagem-Materia_Dia-do-Cachorro.png', '1', 'femea', 'sim', 'gggg', '', 'cachorro'),
-(10, 'wwwww', 'https://www.florence.edu.br/wp-content/uploads/2022/08/Imagem-Materia_Dia-do-Cachorro.png', '2', 'macho', 'sim', 'saaa', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'gato'),
-(11, 'Maria', 'https://images.pexels.com/photos/827209/pexels-photo-827209.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500', '1', 'femea', 'sim', 's', 'aaaaaabatatao', 'gato'),
-(12, 'Fernanda2222', 'https://www.florence.edu.br/wp-content/uploads/2022/08/Imagem-Materia_Dia-do-Cachorro.png', '23', 'femea', 'sim', 's', 'aaaaaabatatao2222', 'cachorro');
+(13, 'Maria', 'https://s3.amazonaws.com/petz-cdm-stg/7182ab81-1f6c-4068-b3bc-ba3b124b3b35.jpeg\n', 'adad', 'macho', 'sim', 'gggg', 'qweqweqwe', 'cachorro');
 
 -- --------------------------------------------------------
 
@@ -74,18 +64,6 @@ CREATE TABLE `perdido` (
   `bairro` varchar(500) NOT NULL,
   `descricao` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Extraindo dados da tabela `perdido`
---
-
-INSERT INTO `perdido` (`id`, `tipo`, `nome`, `idade`, `raca`, `sexo`, `porte`, `foto`, `bairro`, `descricao`) VALUES
-(13, 'gato', 'Maria', '23', 'sadasd', 'femea', 'medio', 'https://www.florence.edu.br/wp-content/uploads/2022/08/Imagem-Materia_Dia-do-Cachorro.png', '14', 'asdasdasdasd'),
-(14, 'cachorro', 'asdasd', '54', '2222', 'macho', 'medio', 'https://images.pexels.com/photos/827209/pexels-photo-827209.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500', '2', 'asdas'),
-(15, 'cachorro', 'Mariao', '2', 'gggg', 'macho', 'pequeno', 'https://www.florence.edu.br/wp-content/uploads/2022/08/Imagem-Materia_Dia-do-Cachorro.png', '17', 'sadsdsasd'),
-(16, 'cachorro', 'Fernanda33', '1', 's222222', 'macho', 'medio', 'https://www.florence.edu.br/wp-content/uploads/2022/08/Imagem-Materia_Dia-do-Cachorro.png', '17', 'asdsadasdadsdas'),
-(17, 'cachorro', 'sss', '0', 'ssss', 'femea', 'medio', 'https://www.florence.edu.br/wp-content/uploads/2022/08/Imagem-Materia_Dia-do-Cachorro.png', '17', 'ssss'),
-(18, 'cachorro', 'Maria', '1', 's', 'femea', 'pequeno', 'https://www.florence.edu.br/wp-content/uploads/2022/08/Imagem-Materia_Dia-do-Cachorro.png', '0', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
 
 -- --------------------------------------------------------
 
@@ -183,7 +161,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de tabela `adocao`
 --
 ALTER TABLE `adocao`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT de tabela `perdido`
