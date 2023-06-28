@@ -4,8 +4,8 @@ export const SERVER = {
 }
 //Database config
 export const DB = {
-    USER: process.emv.DB_USER || "root",
-    HOST: process.emv.DB_HOST || "localhost",
-    PASS: process.emv.DB_PASSWORD || "",
-    DB_NAME: process.emv.DB_NAME || "miaudota_db"
+    HOST: process.env.DB_HOST || "localhost",
+    USER: process.env.DB_USER || "root",
+    PASS: process.env.DB_PASSWORD || "",
+    DB_NAME: process.env.DB_NAME || "miaudota_db"
 }
